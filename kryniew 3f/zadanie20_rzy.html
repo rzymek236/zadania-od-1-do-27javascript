@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 20</title>
+</head>
+<body>
+<h2>Obliczanie długości boków trójkąta</h2>
+
+<script>
+var xa_rzy = parseFloat(prompt("Podaj xa:"));
+var ya_rzy = parseFloat(prompt("Podaj ya:"));
+var xb_rzy = parseFloat(prompt("Podaj xb:"));
+var yb_rzy = parseFloat(prompt("Podaj yb:"));
+var xc_rzy = parseFloat(prompt("Podaj xc:"));
+var yc_rzy = parseFloat(prompt("Podaj yc:"));
+
+function AB_rzy(xa, ya, xb, yb) {
+    return Math.sqrt(Math.pow(xb-xa,2) + Math.pow(yb-ya,2));
+}
+
+function BC_rzy(xb, yb, xc, yc) {
+    return Math.sqrt(Math.pow(xc-xb,2) + Math.pow(yc-yb,2));
+}
+
+function AC_rzy(xa, ya, xc, yc) {
+    return Math.sqrt(Math.pow(xc-xa,2) + Math.pow(yc-ya,2));
+}
+
+document.write("AB = " + AB_rzy(xa_rzy,ya_rzy,xb_rzy,yb_rzy).toFixed(2) + "<br>");
+document.write("BC = " + BC_rzy(xb_rzy,yb_rzy,xc_rzy,yc_rzy).toFixed(2) + "<br>");
+document.write("AC = " + AC_rzy(xa_rzy,ya_rzy,xc_rzy,yc_rzy).toFixed(2));
+</script>
+</body>
+</html>

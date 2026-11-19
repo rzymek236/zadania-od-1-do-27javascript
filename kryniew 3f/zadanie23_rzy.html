@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 23</title>
+</head>
+<body>
+<h2>Drabina oparta o mur</h2>
+
+<form>
+Wysokość oparcia D [m]:
+<input type="number" id="D" step="any"><br><br>
+
+Odległość od muru X [m]:
+<input type="number" id="X" step="any"><br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz()">
+</form>
+
+<p id="wynik"></p>
+
+<script>
+function dlugosc_rzy(D,X) {
+    return Math.sqrt(D*D + X*X);
+}
+
+function kat_rzy(D,X) {
+    return Math.atan(D/X) * 180 / Math.PI;
+}
+
+function oblicz() {
+    var D = parseFloat(document.getElementById("D").value);
+    var X = parseFloat(document.getElementById("X").value);
+
+    if (D <= 0 || X <= 0 || isNaN(D) || isNaN(X)) {
+        document.getElementById("wynik").innerHTML =
+        "Podaj prawidłowe dodatnie wartości.";
+        return;
+    }
+
+    document.getElementById("wynik").innerHTML =
+    "Długość drabiny = " + dlugosc_rzy(D,X).toFixed(2) + " m<br>" +
+    "Kąt nachylenia = " + kat_rzy(D,X).toFixed(2) + "°";
+}
+</script>
+</body>
+</html>

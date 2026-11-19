@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 19</title>
+</head>
+<body>
+<h1>Wszystko o KWADRACIE</h1>
+
+Podaj długość boku:
+<input type="number" id="dlugosc" step="any">
+cm
+<br><br>
+
+<input type="button" value="Oblicz pole" onclick="Pole_rzy()">
+<br><br>
+
+<input type="button" value="Oblicz obwód" onclick="obwod_rzy()">
+
+<div id="nazwa" style="color:red; font-size:30px;"></div>
+
+<script>
+function Pole_rzy() {
+    var a_rzy = parseFloat(document.getElementById("dlugosc").value);
+    var b_rzy = a_rzy * a_rzy;
+
+    document.getElementById("nazwa").innerHTML =
+    "Pole kwadratu = " + b_rzy.toFixed(2) + " cm²";
+}
+
+function obwod_rzy() {
+    var a_rzy = parseFloat(document.getElementById("dlugosc").value);
+    var b_rzy = 4 * a_rzy;
+
+    document.getElementById("nazwa").innerHTML =
+    "Obwód kwadratu = " + b_rzy.toFixed(2) + " cm";
+}
+</script>
+</body>
+</html>

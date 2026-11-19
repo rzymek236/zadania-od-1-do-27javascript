@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 9 - Rzymowski</title>
+<script>
+function show_prompt_rzy() {
+    var imie = prompt("Napisz imię", "Michał");
+
+    if (imie != null && imie != "") {
+        document.body.innerHTML = "Witaj " + imie + "! Jak się masz?";
+    }
+}
+</script>
+</head>
+<body>
+<h2>Zadanie 9 — Prompt Box</h2>
+<input type="button" value="Pokaż Prompt Box"
+onclick="show_prompt_rzy()">
+</body>
+</html>

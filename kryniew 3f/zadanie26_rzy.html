@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 26</title>
+</head>
+<body>
+<h2>Trapez równoramienny – pole i obwód</h2>
+
+<form onsubmit="oblicz(); return false;">
+Górna podstawa a:
+<input type="number" id="a" step="any"><br><br>
+
+Dolna podstawa b:
+<input type="number" id="b" step="any"><br><br>
+
+Wysokość h:
+<input type="number" id="h" step="any"><br><br>
+
+<input type="submit" value="Oblicz">
+</form>
+
+<div id="wynik"></div>
+
+<script>
+function Pow_rzy(a,b,h) {
+    return ((a+b)*h)/2;
+}
+
+function Obw_rzy(a,b,h) {
+    var roznica = Math.abs(a-b);
+    var ramie = Math.sqrt(h*h + Math.pow(roznica/2,2));
+    return a+b+2*ramie;
+}
+
+function oblicz() {
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var h = parseFloat(document.getElementById("h").value);
+
+    if (a <= 0 || b <= 0 || h <= 0 ||
+        isNaN(a) || isNaN(b) || isNaN(h)) {
+        document.getElementById("wynik").innerHTML =
+        "Wpisz prawidłowe dodatnie wartości.";
+        return;
+    }
+
+    document.getElementById("wynik").innerHTML =
+    "Pole trapezu = " + Pow_rzy(a,b,h).toFixed(2) + "<br>" +
+    "Obwód trapezu = " + Obw_rzy(a,b,h).toFixed(2);
+}
+</script>
+</body>
+</html>
