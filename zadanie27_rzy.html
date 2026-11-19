@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 27</title>
+</head>
+<body>
+<h2>Samolot – obliczanie wysokości i kąta</h2>
+
+<form onsubmit="oblicz(); return false;">
+Odległość Artura od Dawida [m]:
+<input type="number" id="odl_rzy" step="any"><br><br>
+
+Droga samolotu [m]:
+<input type="number" id="s_rzy" step="any"><br><br>
+
+<input type="submit" value="Oblicz">
+</form>
+
+<div id="wynik"></div>
+
+<script>
+function wysokosc_rzy(odl,s) {
+    return Math.sqrt(s*s - odl*odl);
+}
+
+function kat_rzy(odl,s) {
+    return Math.acos(odl/s) * 180 / Math.PI;
+}
+
+function oblicz() {
+    var odl_rzy = parseFloat(document.getElementById("odl_rzy").value);
+    var s_rzy = parseFloat(document.getElementById("s_rzy").value);
+
+    if (odl_rzy <= 0 || s_rzy <= 0 ||
+        isNaN(odl_rzy) || isNaN(s_rzy) || s_rzy < odl_rzy) {
+        document.getElementById("wynik").innerHTML =
+        "Podaj poprawne dane. Droga samolotu musi być większa lub równa odległości.";
+        return;
+    }
+
+    var h_rzy = wysokosc_rzy(odl_rzy,s_rzy);
+    var kat = kat_rzy(odl_rzy,s_rzy);
+
+    document.getElementById("wynik").innerHTML =
+    "Wysokość samolotu h = " + h_rzy.toFixed(2) + " m<br>" +
+    "Kąt startu = " + kat.toFixed(2) + "°";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 22</title>
+</head>
+<body>
+<h1>Obliczanie pola i obwodu prostokąta</h1>
+
+<form>
+Podaj bok a:
+<input type="number" id="a_dana_rzy" step="any"><br><br>
+
+Podaj bok b:
+<input type="number" id="b_dana_rzy" step="any"><br><br>
+
+<input type="button" value="Oblicz pole" onclick="Pole_rzymowski(
+parseFloat(document.getElementById('a_dana_rzy').value),
+parseFloat(document.getElementById('b_dana_rzy').value))">
+
+<input type="button" value="Oblicz obwód" onclick="obwod_rzymowski(
+parseFloat(document.getElementById('a_dana_rzy').value),
+parseFloat(document.getElementById('b_dana_rzy').value))">
+</form>
+
+<br>
+Pole:
+<input id="pole" readonly>
+<br><br>
+Obwód:
+<input id="obw" readonly>
+
+<p id="wyprowadz_pole_rzy"></p>
+<p id="wyprowadz_obwod_rzy"></p>
+
+<script>
+function Pole_rzymowski(a_rzy,b_rzy) {
+    var wynik = a_rzy * b_rzy;
+
+    document.getElementById("pole").value = wynik.toFixed(2);
+    document.getElementById("wyprowadz_pole_rzy").innerHTML =
+    "Pole prostokąta = " + wynik.toFixed(2);
+}
+
+function obwod_rzymowski(a_rzy,b_rzy) {
+    var wynik = 2*a_rzy + 2*b_rzy;
+
+    document.getElementById("obw").value = wynik.toFixed(2);
+    document.getElementById("wyprowadz_obwod_rzy").innerHTML =
+    "Obwód prostokąta = " + wynik.toFixed(2);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 25</title>
+</head>
+<body>
+<div style="color:green; font-size:25px;">
+<script>
+// Autor: wpisz swoje imię i nazwisko
+// Zadanie 25
+
+var No_rzy = parseFloat(prompt("Podaj początkową liczbę atomów No:"));
+var t_rzy = parseFloat(prompt("Podaj czas t w latach:"));
+var T_rzy = parseFloat(prompt("Podaj czas połowicznego rozpadu T1/2:"));
+
+var lambda_rzy = Math.LN2 / T_rzy;
+var N_rzy = No_rzy * Math.pow(Math.E, -lambda_rzy*t_rzy);
+
+document.write("Dane:<br>");
+document.write("No = " + No_rzy + " atomów<br>");
+document.write("t = " + t_rzy + " lat<br>");
+document.write("T1/2 = " + T_rzy + " lat<br><br>");
+
+document.write("Lambda = " + lambda_rzy.toFixed(7) + " 1/rok<br>");
+document.write("Liczba atomów po czasie t: N = " +
+N_rzy.toFixed(2) + " atomów");
+</script>
+</div>
+</body>
+</html>

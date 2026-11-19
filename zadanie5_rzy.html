@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Rzymowski 3F - zadanie 5</title>
+<script>
+function otworzGrafike(nr, top, left) {
+    window.open("grafika" + nr + ".html", "grafika_okno_" + nr,
+    "toolbar=no,directories=no,menubar=no,height=300,width=300,top=" + top + ",left=" + left);
+}
+function otworzZadanie(nr) {
+    window.open("z" + nr + (nr === 3 ? "_rzy" : "_rzym") + ".html",
+    "zadanie_" + nr, "toolbar=no,directories=no,menubar=no,height=600,width=700,top=100,left=100");
+}
+function okno_zamknij_rzy_5() { window.close(); }
+</script>
+</head>
+<body>
+<h2>Michał Rzymowski, klasa 3F, nr 22</h2>
+<p>Układ: (22 mod 4) = 2, czyli <b>Układ 2</b>.</p>
+<button onclick="window.open('zadanie1_rzym.html','zadanie_1','width=700,height=600,top=100,left=500')">Zadanie 1</button>
+<button onclick="window.open('zadanie2_rzym.html','zadanie_2','width=700,height=600,top=100,left=500')">Zadanie 2</button>
+<button onclick="window.open('zadanie3_rzy.html','zadanie_3','width=700,height=600,top=100,left=500')">Zadanie 3</button>
+<button onclick="window.open('z4_rzy.html','zadanie_4','width=700,height=600,top=100,left=500')">Zadanie 4</button>
+<hr>
+<h3>Śmieszna historyjka</h3>
+<button onclick="otworzGrafike(1,100,100)">Grafika 1</button>
+<button onclick="otworzGrafike(2,100,430)">Grafika 2</button>
+<button onclick="otworzGrafike(3,430,100)">Grafika 3</button>
+<button onclick="otworzGrafike(4,430,430)">Grafika 4</button>
+<br><br>
+<button onclick="okno_zamknij_rzy_5()">Zamknij okno</button>
+</body>
+</html>

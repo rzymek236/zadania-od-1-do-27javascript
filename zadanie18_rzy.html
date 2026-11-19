@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 18</title>
+</head>
+<body>
+<div style="color:navy; font-size:30px;">
+<script>
+var a = parseFloat(prompt("Podaj a:", ""));
+var b = parseFloat(prompt("Podaj b:", ""));
+
+function suma_rzy(a, b) {
+    return a + b;
+}
+
+function odejmowanie_rzy(a, b) {
+    return a - b;
+}
+
+function mnozenie_rzy(a, b) {
+    return a * b;
+}
+
+function od_kwadratu_rzy(a, b) {
+    document.write(a + "^2 = " + Math.pow(a, 2) + "<br>");
+    document.write(b + "^2 = " + Math.pow(b, 2) + "<br>");
+}
+
+function reszta_z_dzielenia_a_przez_b_rzy(a, b) {
+    return a % b;
+}
+
+document.write("a = " + a + ", b = " + b + "<br><br>");
+document.write("Suma = " + suma_rzy(a, b) + "<br>");
+document.write("Odejmowanie = " + odejmowanie_rzy(a, b) + "<br>");
+document.write("Mnożenie = " + mnozenie_rzy(a, b) + "<br>");
+od_kwadratu_rzy(a, b);
+document.write("Reszta z dzielenia = " +
+reszta_z_dzielenia_a_przez_b_rzy(a, b));
+</script>
+</div>
+</body>
+</html>

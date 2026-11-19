@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 6 - Rzymowski</title>
+</head>
+<body>
+<h2>Zadanie 6 — Michał Rzymowski, 3F</h2>
+
+<b>1. Jakie są rodzaje okienek w JavaScript?</b>
+<p><u>alert()</u> wyświetla komunikat i przycisk OK.
+<u>prompt()</u> pozwala wpisać wartość.
+<u>confirm()</u> pozwala potwierdzić lub odrzucić działanie.</p>
+
+<b>2. Na czym polega konwersja liczb?</b>
+<p>Konwersja polega na zmianie typu danych.
+parseInt() zamienia wartość na liczbę całkowitą,
+parseFloat() na liczbę, która może mieć część ułamkową,
+a toString() na tekst.</p>
+
+<b>3. Jakie są zasady nazywania zmiennych?</b>
+<p>Nazwa musi zaczynać się od litery, znaku $ lub _.
+W nazwie można używać liter, cyfr, $ i _.
+Wielkość liter ma znaczenie i nie należy używać słów kluczowych
+JavaScript jako nazw zmiennych.</p>
+
+<b>4. Jakie są typy zmiennych w JavaScript?</b>
+<p>Number — liczby, String — tekst, Boolean — wartości logiczne,
+Null — brak wartości, Undefined — wartość niezdefiniowana,
+Object — obiekt.</p>
+</body>
+</html>

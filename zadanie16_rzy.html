@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 16 - Rzymowski</title>
+</head>
+<body>
+<div style="color:navy;font-size:30px">
+<script>
+var A_rzy = parseInt(prompt("Podaj pierwszą liczbę A:", ""));
+var B_rzy = parseInt(prompt("Podaj drugą liczbę B:", ""));
+
+var wynik = Math.pow(A_rzy + B_rzy, 3);
+var skladnik1 = Math.pow(A_rzy, 3);
+var skladnik2 = 3 * Math.pow(A_rzy, 2) * B_rzy;
+var skladnik3 = 3 * A_rzy * Math.pow(B_rzy, 2);
+var skladnik4 = Math.pow(B_rzy, 3);
+
+document.write("Wczytane liczby: A=" + A_rzy +
+" B=" + B_rzy + "<br><br>");
+
+document.write("(" + A_rzy + " + " + B_rzy + ")^3 = " +
+A_rzy + "^3 + 3*(" + A_rzy + "^2)*(" + B_rzy + ") + " +
+"3*(" + A_rzy + ")*(" + B_rzy + "^2) + " +
+B_rzy + "^3 = " +
+skladnik1 + " + " + skladnik2 + " + " +
+skladnik3 + " + " + skladnik4 + " = " + wynik);
+</script>
+</div>
+</body>
+</html>

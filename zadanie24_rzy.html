@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 24</title>
+</head>
+<body>
+<div style="color:navy; font-size:25px;">
+<script>
+var x1_rzy = parseFloat(prompt("Podaj x1:"));
+var x2_rzy = parseFloat(prompt("Podaj x2:"));
+
+var rad = (x1_rzy * Math.PI) / 180;
+
+document.write("Wczytane liczby:<br>");
+document.write("x1 = " + x1_rzy + "&nbsp;&nbsp;&nbsp;&nbsp;");
+document.write("x2 = " + x2_rzy + "<br><br>");
+
+document.write("x1 do potęgi x2 = " +
+Math.pow(x1_rzy,x2_rzy).toFixed(2) + "<br>");
+
+document.write("x1 w stopniach = " + x1_rzy + "°<br>");
+document.write("x1 w radianach = " + rad.toFixed(2) + "<br>");
+
+document.write("sin(x1) = " + Math.sin(rad).toFixed(2) + "<br>");
+document.write("cos(x1) = " + Math.cos(rad).toFixed(2) + "<br>");
+document.write("tan(x1) = " + Math.tan(rad).toFixed(2) + "<br>");
+</script>
+</div>
+</body>
+</html>

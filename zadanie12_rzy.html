@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 12 - Rzymowski</title>
+</head>
+<body>
+<div style="color:green;font-size:59px">
+<script>
+var D1_rzy = parseInt(prompt("Podaj dzień D1:", ""));
+var G1_rzy = parseInt(prompt("Podaj godzinę G1:", ""));
+var D2_rzy = parseInt(prompt("Podaj dzień D2:", ""));
+var G2_rzy = parseInt(prompt("Podaj godzinę G2:", ""));
+
+var sekundy = ((D1_rzy - D2_rzy) * 24 + G1_rzy - G2_rzy)
+* 60 * 60;
+
+document.write("Ilość sekund = " + sekundy);
+</script>
+</div>
+</body>
+</html>
